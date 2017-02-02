@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'generank.api',
     'generank.twentythreeandme',
     'generank.compute',
+    'generank.reporting',
 ]
 
 if DEBUG:
@@ -55,6 +56,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'oauth2_provider.ext.rest_framework.OAuth2Authentication',
+        'rest_framework.authentication.SessionAuthentication',
     ),
     'PAGE_SIZE': 10,
     'DEFAULT_FILTER_BACKENDS': (
