@@ -75,7 +75,7 @@
       							Users who have imported their data
       						</td>
       						<td>
-                      %
+                    {{perc_import}}%
       						</td>
 
       					</tr>
@@ -87,7 +87,7 @@
       							Users who have completed follow ups
       						</td>
       						<td>
-                      %
+                    {{perc_follow}}%
       						</td>
 
       					</tr>
@@ -99,7 +99,7 @@
       						  Users who have received their score
       						</td>
       						<td>
-      							%
+      							{{perc_risk_score_complete}}%
       						</td>
 
       					</tr>
@@ -107,7 +107,9 @@
       			</table>
       		</div>
       		<div class="col-md-8">
-      			<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" /><img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
+      			<img alt="Bootstrap Image Preview" src="data:image/png;base64, {{risk_score_graph}}" />
+            <br></br>
+            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
       		</div>
       	</div>
       </div>
