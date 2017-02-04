@@ -15,19 +15,21 @@ from generank.reporting.tasks import *
 def report(request):
     ''' This returns all the report page for MyGeneRank '''
 
+    # Numerical Data
     num_users, num_recent_users = get_user_info()
     perc_import, perc_follow = get_usage_info()
     perc_risk_score_complete = get_risk_score_status_info()
-    last_200_risk_scores = get_risk_scores()
 
-    print(last_200_risk_scores)
-    risk_score_graph = plot_risk_scores(last_200_risk_scores)
+    # Graphs
+    user_growth_graph = plot_users()
+    risk_score_graph = plot_risk_scores()
 
     data = {'num_users':num_users,
             'num_recent_users':num_recent_users,
             'perc_import': perc_import,
             'perc_follow': perc_follow,
             'perc_risk_score_complete': perc_risk_score_complete,
-            'risk_score_graph': risk_score_graph}
+            'risk_score_graph': risk_score_graph,
+            'user_growth_graph': user_growth_graph}
 
     return response.Response(data, template_name='reports.html')

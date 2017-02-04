@@ -21,6 +21,7 @@ ecdsa==0.13
 Fabric3==1.10.2.post3
 kombu==3.0.35
 Markdown==2.6.6
+matplotlib==2.0.0
 oauthlib==1.0.3
 paramiko==1.16.0
 pbr==1.10.0

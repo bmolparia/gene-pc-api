@@ -29,6 +29,7 @@
       	</div>
       	<div class="row">
       		<div class="col-md-4">
+            <h3>Usage Statistics<br></br></h3>
       			<table class="table">
       				<thead>
       					<tr>
@@ -60,7 +61,7 @@
       							2
       						</td>
       						<td>
-      							Users in the past 24 hours
+      							New users in the past 24 hours
       						</td>
       						<td>
       							{{num_recent_users}}
@@ -106,10 +107,11 @@
       				</tbody>
       			</table>
       		</div>
-      		<div class="col-md-8">
-      			<img alt="Bootstrap Image Preview" src="data:image/png;base64, {{risk_score_graph}}" />
-            <br></br>
-            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
+          <div class="col-md-1"></div>
+      		<div class="col-md-7">
+            <img alt="User Growth Graph" src="data:image/png;base64, {{user_growth_graph}}" />
+      		  <br></br><br></br>
+            <img alt="Risk Score Graph" src="data:image/png;base64, {{risk_score_graph}}" />
       		</div>
       	</div>
       </div>
